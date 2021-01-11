@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        table td {
+            border: 1px solid black;
+            height: 25px;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="result"></table>
+    <script>
+        let strOut = "<tbody>";
+        for (var i = 1; i <= 9; i++) {
+            strOut += "<tr>";
+            for (var j = 2; j <= 9; j++) {
+                strOut += "<td>" + j + "x" + i + "=" + (i * j) + "</td>";
+            }
+            strOut += "</tr>";
+        }
+        strOut += "</tbody>";
+        console.log(strOut);
+        document.getElementById("result").innerHTML = strOut;
+    </script>
+</body>
+
+</html>
